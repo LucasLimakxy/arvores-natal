@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'arvores_natal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd59rghvoslj9q7',
+        'USER': 'xpfljkamkecibs',
+        'PASSWORD': '8899c958acd6a956b5a562cf30eb2287fee8c94616d4ae429dc7f6db6871822d',
+        'HOST': 'ec2-52-203-160-194.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
