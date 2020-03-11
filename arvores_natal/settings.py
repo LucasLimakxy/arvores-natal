@@ -128,4 +128,4 @@ STATIC_ROOT = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
