@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/static/img/favicon.png">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Gaia - Bootstrap Template | Free Demo</title>
+    <title>Praças Públicas</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link href="/static/css/bootstrap.css" rel="stylesheet" />
     <link href="/static/css/gaia.css" rel="stylesheet"/>
@@ -31,8 +31,8 @@
                     <span class="icon-bar bar2"></span>
                     <span class="icon-bar bar3"></span>
                 </button>
-                <a href="http://www.creative-tim.com" class="navbar-brand">
-                    Gaia - Free Demo
+                <a href="/" class="navbar-brand">
+                    Praças Públicas
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -74,15 +74,15 @@
             <div class="container">
                 <div class="content">
                     <div class="title-area">
-                        <p>Free Demo</p>
-                        <h1 class="title-modern">Gaia</h1>
-                        <h3>Probably the most stylish bootstrap template in the world!</h2>
+                        <!-- <p>Free Demo</p> -->
+                        <h1 class="title-modern">Praças Públicas</h1>
+                        <h3>Praças Públicas da Zona Sul de Natal</h2>
                         <div class="separator line-separator">♦</div>
                     </div>
 
                     <div class="button-get-started">
-                        <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" target="_blank" class="btn btn-white btn-fill btn-lg ">
-                            Download Demo
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOazCIxxnxRVFpFncNyCfgvu-LatCPpQnhgmuX4jPLF9l9iw/viewform" target="_blank" class="btn btn-white btn-fill btn-lg ">
+                            Colabore Conosco 
                         </a>
                     </div>
                 </div>
@@ -96,39 +96,39 @@
         <div class="container">
             <div class="row">
                 <div class="title-area">
-                    <h2>Our Services</h2>
+                    <h2>Nossa Pesquisa</h2>
                     <div class="separator separator-danger">✻</div>
-                    <p class="description">We promise you a new look and more importantly, a new attitude. We build that by getting to know you, your needs and creating the best looking clothes.</p>
+                    <p class="description" style="text-align: justify !important;">A presença de árvores na área urbana permite um espaço com melhor qualidade de vida e bem estar à população intraurbana, esses espaços quando bem planejados permitem que espécies nativas ameaçadas ou não, sejam conservadas<i> ex situ </i>. O objetivo desse estudo foi identificar as espécies arbóreas presente nas praças da zona sul a fim de documentá-las e avaliar a frequência de visitas, bem como as motivações e desejos em relação a estes espaços. Foram amostradas 90 praças da zona sul de Natal e coletado o material botânico de cada espécie, e foi enviado um formulario Online para a população para conhecer a frequência de visitas á esses espaços.Foram encontradas 2971 indivíduos. As espécies <i>Anacardium occidentale L.</i> e <i>Mangifera indica L.</i> foram as espécies que obtiveram maior número de indivíduos, as espécies exóticas somaram 63% dos indivíduos encontrados. As famílias com maior frequência foram Anacardiaceae e Fabaceae. Das 80 respostas feitas no formulário 67 respostas foram consideradas por se tratarem da região da grande Natal, 20 afirmam que frequentam as praças de sua cidade.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="info-icon">
                         <div class="icon text-danger">
+                            <i class="pe-7s-map-marker"></i>
+                        </div>
+                        <h3>Bairros</h3>
+                        <p class="description">A pesquisa foi realizada nas praças dos seguintes bairros: Pitimbu, Capim Macio, Nova Descoberta, Candelária, Lagoa Nova, Ponta Negra e Neópolis.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
                             <i class="pe-7s-graph1"></i>
                         </div>
-                        <h3>Sales</h3>
-                        <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
+                        <h3>Resultados</h3>
+                        <p class="description">Em relação a frequência de famílias, Anacardiaceae e Fabaceae foram as mais frequentes, a participação de plantas da família Fabaceae é comum em praças urbanas.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-note2"></i>
+                            <i class="pe-7s-sun"></i>
                         </div>
-                        <h3>Content</h3>
-                        <p class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
+                        <h3>Motivação</h3>
+                        <p class="description">Possibilidade de interação, participação em movimentos culturais, prática de exercícios físicos, descanso, curiosidade e a utilização do espaço por crianças da família.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-music"></i>
-                        </div>
-                        <h3>Music</h3>
-                        <p class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
-                    </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -154,20 +154,21 @@
                                 <div class="row">
 
                                     {% for familia in object_list %}
-                                    <div class="col-md-4">
-                                        <div class="card card-member">
-                                            <div class="content">
-                                                <div class="avatar avatar-danger">
-                                                    <img alt="..." class="img-circle" src="{{ familia.imagem.url }}"/>
-                                                </div>
-                                                <div class="description">
-                                                    <h3 class="title">{{ familia.nome_cientifico }}</h3>
-                                                    <p class="small-text">{{ familia.nome_popular}}</p>
-                                                    <p class="description">{{ familia.descricao }}</p>
+                                    <a href="{% url 'list_arvores' familia.pk %}">
+                                        <div class="col-md-4">
+                                            <div class="card card-member">
+                                                <div class="content">
+                                                    <div class="avatar avatar-danger">
+                                                        <img alt="..." class="img-circle" src="{{ familia.imagem.url }}"/>
+                                                    </div>
+                                                    <div class="description">
+                                                        <h3 class="title">{{ familia.nome_cientifico }}</h3>
+                                                        <p class="small-text">{{ familia.nome_popular}}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                     {% endfor %}
                                     
 
@@ -184,8 +185,8 @@
     <div class="section section-our-clients-freebie">
         <div class="container">
             <div class="title-area">
-                <h5 class="subtitle text-gray">Here are some</h5>
-                <h2>Clients Testimonials</h2>
+                <h5 class="subtitle text-gray">Aqui estão as</h5>
+                <h2>Pesquisadoras</h2>
                 <div class="separator separator-danger">∎</div>
             </div>
 

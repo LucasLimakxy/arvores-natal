@@ -20,9 +20,10 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),    
     url('^dashboard/$', views.DashboardView.as_view(), name='dashboard'),
-
+    url('^arvores/(?P<pk>\d+)/$', views.ListArvoresView.as_view(), name='list_arvores'),
+    url('', views.DashboardView.as_view(), name='default'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
