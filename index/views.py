@@ -15,3 +15,7 @@ class ListArvoresView(DetailView):
         context = super().get_context_data(**kwargs)    
         context['arvores'] = Arvore.objects.filter(familia=self.get_object())
         return context
+
+class ListProducoesView(ListView):
+    model = Producao
+    template_name = 'index/producoes_list.html'

@@ -5,3 +5,4 @@ from index.models import *
 
 admin.site.register(Arvore)
 admin.site.register(Familia)
+admin.site.register(Producao)

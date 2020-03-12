@@ -23,3 +23,12 @@ class Arvore(models.Model):
 
     def __str__(self):
         return self.nome_popular
+
+class Producao(models.Model):
+    titulo = models.CharField(_('Título'), max_length=80) 
+    descricao = models.TextField(null=True, verbose_name='Descrição')
+    arquivo = models.FileField(upload_to='producoes/')
+    data = models.DateField() 
+
+    def __str__(self):
+        return self.titulo

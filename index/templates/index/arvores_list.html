@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
         <meta charset="utf-8" />
         <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
@@ -31,62 +30,19 @@
                     <span class="icon-bar bar2"></span>
                     <span class="icon-bar bar3"></span>
                 </button>
+                <a href="{% url 'dashboard' %}" class="navbar-brand">
+                    Praças Públicas
+                </a>
             </div>
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                    <li>
-                        <a href="home.html">Home</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-danger">
-                            <li>
-                                <a href="blog-post.html">Blog post</a>
-                            </li>
-                            <li>
-                                <a href="blog-posts.html">Blog Posts</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-danger">
-                            <li>
-                                <a href="about-us.html">About us</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Contact us</a>
-                            </li>
-                            <li>
-                                <a href="portfolio.html">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="signin.html">Signin</a>
-                            </li>
-                            <li>
-                                <a href="signup.html">Signup</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pricing.html">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/product/gaia-bootstrap-template-pro" class="btn btn-danger btn-fill">Buy now</a>
-                    </li>
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">                    
                     <li class="dropdown">
                         <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-share-alt"></i> Share
                         </a>
                         <ul class="dropdown-menu dropdown-danger">
                             <li>
-                                <a id="facebookNav" href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a id="twitterNav" href="#"><i class="fa fa-twitter"></i> Twitter</a>
-                            </li>
-                            <li>
-                                <a id="googleNav" href="#"><i class="fa fa-google-plus"></i> Google</a>
+                                <a href="https://www.instagram.com/herbarioufrn/"><i class="fa fa-instagram"></i> Instagram</a>
                             </li>
                         </ul>
                     </li>
@@ -117,7 +73,7 @@
     <div class="section section-blog-horizontal">
         <div class="container">
             <div class="title">
-                <h5 class="text-gray">Checkout our Latest</h5>
+                <h5 class="text-gray">Aqui estão as</h5>
                 <h2>Árvores</h2>
                 <div class="separator separator-danger">✻</div>
             </div>
@@ -128,7 +84,8 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <a href="#link" class="header">
-                            <img src="{{ arvore.imagem.url }}">
+                            <img src="{% static 'img/header-1.jpg' %}" alt="">
+                            <!-- <img src="{{ arvore.imagem.url }}"> -->
                         </a>
                     </div>
                     <div class="col-sm-5 col-md-offset-1">
@@ -166,7 +123,8 @@
                     </div>
                     <div class="col-sm-6 col-sm-offset-1">
                         <a href="#link" class="header">
-                            <img src="{{ arvore.imagem.url }}">
+                            <img src="{% static 'img/header-1.jpg' %}" alt="">
+                            <!-- <img src="{{ arvore.imagem.url }}"> -->
                         </a>
                     </div>
                 </div>
@@ -181,109 +139,9 @@
     </div>
 
     <footer class="footer footer-big footer-color-black" data-color="black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Company</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a></li>
-                                <li>
-                                    <a href="#">Find offers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Discover Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#">Our Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="#">About Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title"> Help and Support</h5>
-                         <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">How it works</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms &amp; Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="#">Company Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Money Back</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Latest News</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i> <b>Get Shit Done</b> The best kit in
-                                        the market is here, just give it a try and let us...
-                                        <hr class="hr-small">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i> We've just been featured on <b> Awwwards Website</b>! Thank you everybody for...
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-2 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Follow us on</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
-                                        <i class="fa fa-facebook-square"></i> Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
-                                        <i class="fa fa-dribbble"></i> Dribbble
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
-                                        <i class="fa fa-twitter"></i> Twitter
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
-                                        <i class="fa fa-google-plus-square"></i> Google+
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <hr>
+        <div class="container">     
             <div class="copyright">
-                 © <script> document.write(new Date().getFullYear()) </script> Creative Tim, made with love
+                 © <script> document.write(new Date().getFullYear()) </script> DeLima, criado com amor
             </div>
         </div>
     </footer>

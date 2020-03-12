@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8" />
@@ -31,30 +31,21 @@
                     <span class="icon-bar bar2"></span>
                     <span class="icon-bar bar3"></span>
                 </button>
+                <a href="{% url 'dashboard' %}" class="navbar-brand">
+                    Praças Públicas
+                </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                    <li>
-                        <a href="http://www.creative-tim.com/product/gaia-bootstrap-template-pro" target="_blank">Get PRO Version</a>
-                    </li>
                     <li class="dropdown">
                         <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-share-alt"></i> Share
+                            <i class="fa fa-share-alt"></i> Siga-nos
                         </a>
                         <ul class="dropdown-menu dropdown-danger">
                             <li>
-                                <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                                <a href="https://www.instagram.com/herbarioufrn/"><i class="fa fa-instagram"></i> Instagram</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" class="btn btn-danger btn-fill">Free Download</a>
                     </li>
                 </ul>
             </div>
@@ -141,7 +132,9 @@
                         <div class="title-area">
                             <h2>Famílias</h2>
                             <div class="separator separator-danger">✻</div>
-                            <p class="description">We promise you a new look and more importantly, a new attitude. We build that by getting to know you, your needs and creating the best looking clothes.</p>
+                            <p class="description">
+                                O que o cientista - e o ser humano num geral - mais gosta de fazer é classificar. Sendo assim, existindo uma diversidade enorme de seres vivos e não vivos na natureza, a organização de todo esse complexo conjunto de indivíduos é feito por clados: separamos em menor unidade a espécie, são aqueles indivíduos que conseguem se reproduzir e gerar um indivíduo com suas características similares. O conjunto de espécies que se assemelham muito formam um gênero. Quando existem gêneros semelhantes eles formam um grupo maior, as famílias. Um exemplo para entender bem seria observar as espécies de Pau-brasil, o Flamboyant e o Tamarindo. Essas são espécies distintas, apresentam tamanho variável, flores de diferentes aspectos ou cores, mas elas tem em comum a vagem como fruto, estrutura que comporta suas sementes, e por essas e outras características elas estão agrupadas em gêneros diferentes, mas em maior instância as similaridades entre elas, físicas ou moleculares, as reúnem na família Fabaceae, uma família conhecida pela presença de vagens. Assim, para facilitar a organização, nossas espécies arbóreas estão reunidas dentro de sua respectiva família.
+                            </p>
                         </div>
                     </div>
 
@@ -215,15 +208,17 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="testimonial1">
                     <p class="description">
-                        And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color... Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all!
+                        Alice Calvente, docente na Universidade Federal do Rio Grande do Norte, atua no Departamento de Botânica e Zoologia do Centro de Biociências, no Laboratório de Botânica e Sistemática. E-mail: acalvente@gmail.com
                     </p>
                 </div>
                 <div class="tab-pane" id="testimonial2">
-                    <p class="description">Green I even had the pink polo I thought I was Kanye I promise I will never let the people down. I want a better life for all! And I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. Now there is only one important color...
+                    <p class="description">
+                        Ornela Silva Gomes, engenheira Florestal pela Universidade Federal do Piauí e Pós-Graduanda em Ciência Florestal pela Universidade Federal do Rio Grande do Norte. E-mail: ornelasilva@hotmail.com
                     </p>
                 </div>
                 <div class="tab-pane" id="testimonial3">
-                    <p class="description"> I used a period because contrary to popular belief I strongly dislike exclamation points! We no longer have to be scared of the truth feels good to be home In Roman times the artist would contemplate proportions and colors. The 'Gaia' team did a great work while we were collaborating. They provided a vision that was in deep connection with our needs and helped us achieve our goals.
+                    <p class="description"> 
+                        Aurea Estella, graduanda em Ciências Biológicas pela Universidade Federal do Rio Grande do Norte e atuante na Iniciação Científica dentro do Herbário da UFRN, sob orientação de Alice Calvente. E-mail: aurea.estella@hotmail.com
                     </p>
                 </div>
 
@@ -240,122 +235,22 @@
             </div>
             <div class="container">
                 <div class="title-area">
-                    <h2 class="text-white">Do you want to work with us?</h2>
+                    <h2 class="text-white">Guias e produções </h2>
                     <div class="separator line-separator">♦</div>
-                    <p class="description"> We are keen on creating a second skin for anyone with a sense of style! We design our clothes having our customers in mind and we never disappoint!</p>
+                    <p class="description">Sob orientação da professora Alice Calvente, as turmas de Botânica da Universidade Federal do Rio Grande do Norte, são orientadas a conhecerem um pouco mais sobre a flora potiguar, fazendo um levantamento de espécies encontradas em espaços de convivência urbana, as praças.  Ainda, as turmas são convidadas a divulgarem seus resultados de diversas formas, seja utilizando o meio artístico ou multimédia, de modo que a população local possa sentir um retorno e tenha mais informações sobre o espaço que utilizam.</p>
                 </div>
 
                 <div class="button-get-started">
-                    <a href="#gaia" class="btn btn-danger btn-fill btn-lg">Contact Us</a>
+                    <a href="{% url 'list_producoes' %}" class="btn btn-danger btn-fill btn-lg">Veja os projetos</a>
                 </div>
             </div>
         </div>
     </div>
 
-
     <footer class="footer footer-big footer-color-black" data-color="black">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Company</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a></li>
-                                <li>
-                                    <a href="#">Find offers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Discover Projects</a>
-                                </li>
-                                <li>
-                                    <a href="#">Our Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="#">About Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title"> Help and Support</h5>
-                         <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">How it works</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms &amp; Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="#">Company Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Money Back</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Latest News</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i> <b>Get Shit Done</b> The best kit in the market is here, just give it a try and let us...
-                                        <hr class="hr-small">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i> We've just been featured on <b> Awwwards Website</b>! Thank you everybody for...
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-md-2 col-md-offset-1 col-sm-3">
-                    <div class="info">
-                        <h5 class="title">Follow us on</h5>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-facebook btn-simple">
-                                        <i class="fa fa-facebook-square"></i> Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-dribbble btn-simple">
-                                        <i class="fa fa-dribbble"></i> Dribbble
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-twitter btn-simple">
-                                        <i class="fa fa-twitter"></i> Twitter
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-social btn-reddit btn-simple">
-                                        <i class="fa fa-google-plus-square"></i> Google+
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <hr>
+        <div class="container">     
             <div class="copyright">
-                 © <script> document.write(new Date().getFullYear()) </script> Creative Tim, made with love
+                    © <script> document.write(new Date().getFullYear()) </script> DeLima, criado com amor
             </div>
         </div>
     </footer>

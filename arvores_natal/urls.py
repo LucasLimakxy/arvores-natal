@@ -24,7 +24,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),    
     url('^dashboard/$', views.DashboardView.as_view(), name='dashboard'),
     url('^arvores/(?P<pk>\d+)/$', views.ListArvoresView.as_view(), name='list_arvores'),
-    url('', views.DashboardView.as_view(), name='default'),
+    url('^producoes/$', views.ListProducoesView.as_view(), name='list_producoes'),
+    url('^$', views.DashboardView.as_view(), name='default'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
